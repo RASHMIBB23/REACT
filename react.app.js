@@ -39,24 +39,23 @@ const IssueList = ({ issues }) => {
         <div
           key={issue.id}
           style={{
-            border: "1px solid #ccc",
+            border: "1px solid #ddd",
+            borderRadius: "8px",
             padding: "10px",
-            marginBottom: "10px",
-            borderRadius: "5px",
+            margin: "10px 0",
+            backgroundColor: issue.status === "Open" ? "#ffeb3b" : "#c8e6c9",
           }}
         >
           <h3>{issue.title}</h3>
           <p>{issue.description}</p>
-          <p>
-            Status: <strong>{issue.status}</strong>
-          </p>
+          <strong>Status: {issue.status}</strong>
         </div>
       ))}
     </div>
   );
 };
 
-// Main App Component
+// App Component
 function App() {
   return (
     <div>
