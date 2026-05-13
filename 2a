@@ -14,3 +14,13 @@ console.log("The word 'JavaScript' was not found in the input.");
 
 3) const newString = userInput.replace("javascript", "Python");
 console.log("New string after replacement:", newString);
+
+
+4) function isPalindrome(str) {
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const reversedStr = cleanedStr.split('').reverse().join('');
+    return cleanedStr === reversedStr;
+}
+const palindromeInput = prompt("Enter a string to check if it is a palindrome:");
+console.log(`Is "${palindromeInput}" a palindrome?`,
+isPalindrome(palindromeInput));
