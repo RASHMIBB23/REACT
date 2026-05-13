@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listeners Example</title>
+    <style>
+      #myImage {
+        width: 200px;
+        height: auto;
+        border: 3px solid transparent;
+        transition: border 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton">Click Me</button>
+
+    <img id="myImage" src="image.jpg" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("myButton");
+        if (button) {
+          button.addEventListener("click", function () {
+            console.log("Button clicked!");
+          });
+        }
+
+        const image = document.getElementById("myImage");
+        if (image) {
+          image.addEventListener("mouseover", function () {
+            image.style.border = "3px solid red";
+          });
+
+          image.addEventListener("mouseout", function () {
+            image.style.border = "3px solid transparent";
+          });
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        console.log("Key Pressed:", event.key);
+      });
+    </script>
+  </body>
+</html>
