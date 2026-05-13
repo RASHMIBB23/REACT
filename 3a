@@ -1,0 +1,14 @@
+const student = {
+  name: "John Doe",
+  grade: 10,
+  subjects: ["Math", "Science", "English"],
+
+  // Step 2: Define the displayInfo method
+  displayInfo: function () {
+    console.log("Student Name:", this.name);
+    console.log("Grade:", this.grade);
+    console.log("Subjects:", this.subjects.join(", "));
+  },
+};
+// Step 3: Call the method to display student details
+student.displayInfo();
