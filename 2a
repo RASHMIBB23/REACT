@@ -1,0 +1,16 @@
+1) const userInput = prompt("Enter a string:");
+console.log("Length of the string:", userInput.length);
+
+
+2) const startIndex = userInput.indexOf("JavaScript");
+if (startIndex !== -1) {
+// Extract "JavaScript" using substring()
+const extractedWord = userInput.substring(startIndex, startIndex + 10);
+console.log("Extracted word:", extractedWord);
+} else {
+console.log("The word 'JavaScript' was not found in the input.");
+}
+
+
+3) const newString = userInput.replace("javascript", "Python");
+console.log("New string after replacement:", newString);
