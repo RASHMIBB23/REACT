@@ -1,0 +1,15 @@
+const student = {
+  name: "John Doe",
+  grade: 10,
+  subjects: ["Math", "Science", "English"],
+  displayInfo: function () {
+    console.log("Student Name:", this.name);
+    console.log("Grade:", this.grade);
+    console.log("Subjects:", this.subjects.join(", "));
+  },
+};
+const passingGrade = 10;
+student.isPassed = student.grade >= passingGrade;
+for (let key in student) {
+  console.log(key + ":", student[key]);
+}
